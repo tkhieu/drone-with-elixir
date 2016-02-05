@@ -2,6 +2,19 @@
 This is a brief tour on what is required to make a Phoenix application
 buildable through Drone and published as a minimal docker image.
 
+### Running the docker image
+
+```bash
+docker pull dronedemos/drone-with-elixir:latest
+docker run \
+  --restart=always \
+  --publish=4000:4000 \
+  --detach=true \
+  --env SECURITY_KEY_BASE=HS0sTaDOPB0cpGL/wPYYWLy3/R6hJdvqNK+FndiJzhvAtHC2B0E70HSXu9qqwhhH \
+  --name=drone-with-elixir \
+  dronedemos/drone-with-elixir:latest
+```
+
 ### .drone.sec.yml template
 
 ```yaml
@@ -76,7 +89,7 @@ With a default Phoenix application the dependencies will look like:
 
 ## .drone.yml
 Drone allows you to run your build on one type of image and then publish
-against a different image. In this exmaple I am using 
+against a different image. In this exmaple I am using
 `bitwalker/alpine-elixir-phoenix` to generate the build output.
 The reason for this is that this image is based on Alpine 3.3 and also
 has _node_ installed on it. Since _node_ is only needed at compile time
@@ -118,6 +131,3 @@ All scripts need the execute permission in order to run
 ```bash
 chmod +x scripts/ci/*.sh
 ```
-
-
-
