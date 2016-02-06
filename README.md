@@ -90,7 +90,6 @@ build:
   commands:
     - scripts/ci/install_local_dependencies.sh
     - scripts/ci/execute_tests.sh
-    - scripts/ci/generate_secrets.sh
     - scripts/ci/build_release.sh
   environment:
     - SECRET_KEY_BASE=$$SECRET_KEY_BASE
