@@ -15,6 +15,9 @@ docker run \
   dronedemos/drone-with-elixir:latest
 ```
 
+### .gitignore
+Please add `.done.sec.yml` to this file so that it does not get checked in.
+
 ### .drone.sec.yml template
 
 ```yaml
