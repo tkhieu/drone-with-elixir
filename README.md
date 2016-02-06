@@ -19,7 +19,6 @@ docker run \
 
 ```yaml
 environment:
-  SECRET_KEY_BASE: <phoenix application key>
   DOCKER_USERNAME: <docker username>
   DOCKER_EMAIL: <docker email address>
   DOCKER_PASS: <docker password>
