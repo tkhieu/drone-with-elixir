@@ -1,3 +1,4 @@
+
 # Getting Started
 This is a brief tour on what is required to make a Phoenix application
 buildable through Drone and published as a minimal docker image.
